@@ -23,6 +23,15 @@ body {
  width: 100%;
 }
 
+.workspace .image_view_wrapper {
+ position: absolute ;
+ left: 150px;
+ top: 60px;
+ bottom: 12px;
+ right: 40px;
+ border: 1px #aaa solid ;
+}
+
 .workspace .grid_view {
  position: absolute ;
  left: 12px;
@@ -31,21 +40,12 @@ body {
  width: 120px;
 }
 
-.thumbnails_grid_view {
+.workspace .thumbnails_grid_view {
  position: absolute ;
  left: 0px;
  top: 0px;
  right: 0px;
  bottom: 0px;
-}
-
-.workspace .image_view_wrapper {
- position: absolute ;
- left: 150px;
- top: 60px;
- bottom: 12px;
- right: 40px;
- border: 1px #aaa solid ;
 }
 
 
