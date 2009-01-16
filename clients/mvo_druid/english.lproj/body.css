@@ -1,0 +1,52 @@
+/* @group General */
+
+body {
+ overflow: hidden ;
+ position: absolute ;
+ left: 10px;
+ right: 10px;
+ top: 10px;
+ bottom: 10px;
+ border: 1px #aaa solid ;
+ background-color: #fff;
+}
+
+/* @end */
+
+
+/* @group Collections 2 */
+
+.workspace .source_list_label {
+ position: absolute ;
+ left: 14px;
+ top: 20px;
+ width: 100%;
+}
+
+.workspace .grid_view {
+ position: absolute ;
+ left: 12px;
+ top: 60px;
+ bottom: 12px;
+ width: 120px;
+}
+
+.thumbnails_grid_view {
+ position: absolute ;
+ left: 0px;
+ top: 0px;
+ right: 0px;
+ bottom: 0px;
+}
+
+.workspace .image_view_wrapper {
+ position: absolute ;
+ left: 150px;
+ top: 60px;
+ bottom: 12px;
+ right: 40px;
+ border: 1px #aaa solid ;
+}
+
+
+/* @end */
