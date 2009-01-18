@@ -1,0 +1,54 @@
+<!-- thumbnail scroll view -->
+
+<% scroll_view :thumbnails_scroll_view do %>
+	<%= grid_view :thumbnails_grid_view,
+		:example_view => 'SC.ImageCellView',
+		:content_value_key => 'url',
+		:row_height => 60,
+		:column_width => 60,
+		:image_margin =>10,
+		:bind => {
+			:content => 'MvoDruid.thumbnailController.arrangedObjects',
+ 			:selection => 'MvoDruid.thumbnailController.selection'
+		} 
+	%>
+<% end %>
+
+
+<!-- image view -->
+
+<% scroll_view :image_scroll_view do %>
+	<%= image_view :image_view, :tag =>'img',
+		:content_value_key => 'url',
+		:bind => {
+			:content => 'MvoDruid.thumbnailController.selectedThumbnail'
+		}
+	%>
+<% end %>
+
+
+<!-- metadata view -->
+
+<% scroll_view :metadata do %>
+	<% view :metadata_inner do %>
+		<%= label_view :tag => 'h3', :content_value_key => 'title',
+			:bind => { :content => 'MvoDruid.thumbnailController.selection' }
+		%>
+		<%= loc(%(Author)) %>: <%= label_view :tag => 'span', :content_value_key => 'author',
+			:bind => { :content => 'MvoDruid.thumbnailController.selection' }
+		%>
+		<br />
+		<%= loc(%(Source)) %>: <%= label_view :tag => 'span', :content_value_key => 'source_url',
+			:bind => { :content => 'MvoDruid.thumbnailController.selection' }
+		%>
+		<br />
+		<%= loc(%(License)) %>: <%= label_view :tag => 'span', :content_value_key => 'license',
+			:bind => { :content => 'MvoDruid.thumbnailController.selection' }
+		%>
+		<br />
+		<%= loc(%(Description)) %>: <%= label_view :tag => 'span', :content_value_key => 'caption',
+			:escape_html => false,
+			:bind => { :content => 'MvoDruid.thumbnailController.selection' }
+		%>
+	<% end %>
+<% end %>

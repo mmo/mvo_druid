@@ -1,0 +1,56 @@
+/* @group Panes */
+
+.workspace .thumbnails_scroll_view {
+ position: absolute;
+ left: 0px;
+ top: 0px;
+ width: 100px;
+ bottom: 0px;
+ border: 1px solid #000;
+}
+
+.workspace .thumbnails_grid_view {
+ position: absolute;
+ left: 0px;
+ right: 0px;
+ top: 0px;
+ bottom: 0px;
+ border: none ;
+}
+
+.workspace .image_scroll_view {
+ position: absolute;
+ left: 0px;
+ top: 0px;
+ right: 0px;
+ bottom: 0px;
+ border: none;
+}
+
+.workspace .image_view {
+ border: 1px solid #000;
+}
+
+.workspace .metadata {
+ position: absolute;
+ top: 0px;
+ right: 0px;
+ left: 0px;
+ bottom: 0px;
+ border: 1px solid #000;
+}
+
+.workspace .metadata_inner {
+ position: absolute;
+ top: 0px;
+ right: 0px;
+ left: 0px;
+ bottom: 0px;
+ padding: 10px;
+}
+
+.workspace .metadata span {
+ color: #808080;
+}
+
+/* @end */

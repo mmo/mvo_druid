@@ -1,4 +1,4 @@
-/* @group For Tutorial */
+/* @group Main blocks */
 
 body {
  position: absolute ;
@@ -20,64 +20,50 @@ body {
  bottom: 10px;
 }
 
-.workspace .left_scroll_view {
+.workspace .central {
  position: absolute;
- left: 10px;
- top: 100px;
- width: 100px;
- bottom: 50px;
- border: 1px solid #000;
+ left: 210px;
+ top: 110px;
+ right: 210px;
+ bottom: 60px;
 }
 
-.workspace .thumbnails_grid_view {
- position: absolute;
- left: 0px;
- right: 0px;
- top: 0px;
- bottom: 0px;
- border: none ;
-}
-
-.workspace .image_list_scroll_view {
- position: absolute;
- left: 120px;
- top: 100px;
- width: 50px;
- bottom: 50px;
- border: 1px solid #000;
-}
-
-.workspace .image_list_view {
+.workspace .header {
  position: absolute;
  left: 0px;
- right: 0px;
  top: 0px;
+ width: 100%;
+ height: 100px;
+}
+
+.workspace .left_pane {
+ position: absolute;
+ left: 0px;
+ top: 110px;
+ width: 200px;
+ bottom: 60px;
+}
+
+.workspace .right_pane {
+ position: absolute;
+ right: 0px;
+ top: 110px;
+ width: 200px;
+ bottom: 60px;
+}
+
+.workspace .footer {
+ position: absolute;
+ left: 0px;
  bottom: 0px;
- border: none;
+ width: 100%;
+ height: 50px;
 }
 
-.workspace .image_view {
- position: absolute;
- left: 250px;
- top: 100px;
- right: 10px;
- bottom: 50px;
- border: 1px solid #000;
-}
+/* @end */
 
-.workspace #metadata {
- position: absolute;
- top: 100px;
- right: 20px;
- width: 400px;
- min-height: 20px;
- border: 1px solid #000;
- padding: 10px;
-}
 
-.workspace #metadata span {
- color: #808080;
-}
+/* @group Styles */
 
 .workspace h1 {
  border: none ;
@@ -95,4 +81,3 @@ body {
 }
 
 /* @end */
-
