@@ -1,5 +1,5 @@
 // ==========================================================================
-// MvoDruid
+// ProtoOne
 // ==========================================================================
 
 // This is the function that will start your app running.  The default
@@ -15,22 +15,24 @@ function main() {
 	// The default code here will load the fixtures you have defined.
 	// Comment out the preload line and add something to refresh from the server
 	// when you are ready to pull data from your server.
-	MvoDruid.server.preload(MvoDruid.FIXTURES);
+	ProtoOne.server.preload(ProtoOne.FIXTURES);
 
 	// refresh() any collections you have created to get their records.
-	// ex: MvoDruid.contacts.refresh() ;
+	// ex: ProtoOne.contacts.refresh() ;
 
 	// Step 2: Instantiate Your Views
 	// The default code just activates all the views you have on the page. If
 	// your app gets any level of complexity, you should just get the views you
 	// need to show the app in the first place, to speed things up.
 	SC.page.awake();
-	var imageCollection = MvoDruid.SampleImage.collection();
-	MvoDruid.thumbnailController.set('content', imageCollection);
+	var imageCollection = ProtoOne.Image.collection();
+	ProtoOne.imageController.set('content', imageCollection);
 	imageCollection.refresh();
 
 	// Step 3. Set the content property on your primary controller.
 	// This will make your app come alive!
-	//MvoDruid.thumbnailController.set('content', imageCollection);
+
+	// Set the content property on your primary controller
+	// ex: ProtoOne.contactsController.set('content',ProtoOne.contacts);
 
 }

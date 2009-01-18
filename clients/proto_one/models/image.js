@@ -1,5 +1,5 @@
 // ==========================================================================
-// MvoDruid.SampleImage
+// ProtoOne.Image
 // ==========================================================================
 
 require('core');
@@ -12,19 +12,10 @@ require('core');
   @author AuthorName
   @version 0.1
 */
-MvoDruid.SampleImage = SC.Record.extend(
-/** @scope MvoDruid.SampleImage.prototype */ {
+ProtoOne.Image = SC.Record.extend(
+/** @scope ProtoOne.Image.prototype */ {
 
-	properties: [
-		'type',
-		'image_url',
-		'url',
-		'title',
-		'caption',
-		'author',
-		'source_url',
-		'license',
-		'license_url'
-	]
+	properties: ['type', 'url', 'caption', 'author', 'source']
+	//properties: ['type', 'recid', 'file_name', 'mime_type', 'file_size', 'url', 'source_url', 'date_added', 'caption']
 
 });

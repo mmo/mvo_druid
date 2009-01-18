@@ -1,5 +1,5 @@
 // ==========================================================================
-// MvoDruid.ThumbnailController
+// ProtoOne.ImageController
 // ==========================================================================
 
 require('core');
@@ -13,19 +13,19 @@ require('core');
   @version 0.1
   @static
 */
-MvoDruid.thumbnailController = SC.CollectionController.create(
-/** @scope MvoDruid.thumbnailController */ {
+ProtoOne.imageController = SC.CollectionController.create(
+/** @scope ProtoOne.imageController */ {
 
 	// controller options
 	allowsEmptySelection: false,
 	allowsMultipleSelection: false,
 
 	/**
-	Indicates the currently (single) selected thumbnail.
-	If the current selection contains more than one thumbnail,
+	Indicates the currently (single) selected image.
+	If the current selection contains more than one image,
 	the first one is indicated.
 	*/
-	selectedThumbnail: function () {
+	selectedImage: function () {
 		if (this.get('selection')) {
 			return this.get('selection').objectAt(0);
 		}
@@ -34,4 +34,4 @@ MvoDruid.thumbnailController = SC.CollectionController.create(
 		}
 	}.property('selection')
 
-}) ;
+});
