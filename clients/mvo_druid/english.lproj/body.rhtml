@@ -1,12 +1,11 @@
 <!-- main page template -->
 <% content_for('body') do %>
 
-<!-- content -->
 <% view :workspace do %>
 
 	<%= label_view :source_list_label, :tag => 'h1', :value => 'Multivio prototype Druid' %>
 
-	<% scroll_view :grid_view do %>
+	<% scroll_view :left_scroll_view do %>
 		<%= grid_view :thumbnails_grid_view,
 			:example_view => 'SC.ImageCellView',
 			:content_value_key => 'url',
@@ -15,22 +14,24 @@
 			:image_margin =>10,
 			:bind => {
 				:content => 'MvoDruid.thumbnailController.arrangedObjects',
-				:selection => 'MvoDruid.thumbnailController.selection'
+	 			:selection => 'MvoDruid.thumbnailController.selection'
 			} 
 		%>
 	<% end %>
 
-	<div class="image_view_wrapper">
-		<%= image_view :image_view, :tag => 'img',
-			:content_value_key => 'url',
-			:bind => {
-				:content => 'MvoDruid.thumbnailController.selectedThumbnail'
-			}
-		%>
-	</div>
+	<%= image_view :image_view, :tag =>'img',
+		:content_value_key => 'url',
+		:bind => {
+			:content => 'MvoDruid.thumbnailController.selectedThumbnail'
+		}
+	%>
+
+	<%= label_view :tag => 'h3', :content_value_key => 'url',
+		:escape_html => true,
+		:bind => { :content => 'MvoDruid.thumbnailController.selection' }
+	%>
 
 <% end %>
-<!-- end of content -->
 
 <% end %>
 <!-- end of main page template -->

@@ -15,6 +15,16 @@ require('core');
 MvoDruid.SampleImage = SC.Record.extend(
 /** @scope MvoDruid.SampleImage.prototype */ {
 
-	properties: ['type', 'url', 'caption', 'author', 'source']
+	properties: [
+		'type',
+		'image_url',
+		'url',
+		'title',
+		'caption',
+		'author',
+		'source_url',
+		'license',
+		'license_url'
+	]
 
-}) ;
+});
