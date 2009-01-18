@@ -32,6 +32,14 @@ MvoDruid.thumbnailController = SC.CollectionController.create(
 		else {
 			return null;
 		}
-	}.property('selection')
+	}.property('selection'),
+
+	/**
+	Changes the currently selected image
+	*/
+	changeSelection: function (newIndex) {
+		this.set('selection',
+			Array.from(this.arrangedObjects.objectAt(newIndex)));
+	}
 
 }) ;
