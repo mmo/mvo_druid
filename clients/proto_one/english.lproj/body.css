@@ -1,0 +1,98 @@
+/* @group For Tutorial */
+
+body {
+ position: absolute ;
+ left: 0;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ padding: 0;
+ margin: 0;
+ background-color: white;
+/* overflow: hidden ;*/
+}
+
+.workspace {
+ position: absolute;
+ left: 10px;
+ top: 10px;
+ right: 10px;
+ bottom: 10px;
+}
+
+.workspace .left_scroll_view {
+ position: absolute;
+ left: 10px;
+ top: 100px;
+ width: 100px;
+ bottom: 50px;
+ border: 1px solid #000;
+}
+
+.workspace .thumbnails_grid_view {
+ position: absolute;
+ left: 0px;
+ right: 0px;
+ top: 0px;
+ bottom: 0px;
+ border: none ;
+}
+
+.workspace .image_list_scroll_view {
+ position: absolute;
+ left: 120px;
+ top: 100px;
+ width: 50px;
+ bottom: 50px;
+ border: 1px solid #000;
+}
+
+.workspace .image_list_view {
+ position: absolute;
+ left: 0px;
+ right: 0px;
+ top: 0px;
+ bottom: 0px;
+ border: none;
+}
+
+.workspace .image_view {
+ position: absolute;
+ left: 250px;
+ top: 100px;
+ right: 10px;
+ bottom: 50px;
+ border: 1px solid #000;
+}
+
+.workspace #metadata {
+ position: absolute;
+ top: 100px;
+ right: 20px;
+ width: 400px;
+ min-height: 20px;
+ border: 1px solid #000;
+ padding: 10px;
+}
+
+.workspace #metadata span {
+ color: #808080;
+}
+
+.workspace h1 {
+ border: none ;
+ padding: 0px;
+ margin: 0px;
+ letter-spacing: -1px;
+ font: normal 3.4em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+.workspace h3 {
+ margin: 8px 0px;
+ padding: 0px;
+ font: 1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+ color: #808080;
+}
+
+/* @end */
+

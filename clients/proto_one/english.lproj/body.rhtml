@@ -1,0 +1,43 @@
+<% content_for('body') do %>
+
+<% view :workspace do %>
+
+	<%= label_view :source_list_label, :tag => 'h1', :value => 'Prototype One' %>
+
+	<% scroll_view :left_scroll_view do %>
+		<%= grid_view :thumbnails_grid_view,
+			:example_view => 'SC.ImageCellView',
+			:content_value_key => 'url',
+			:row_height => 60,
+			:column_width => 60,
+			:image_margin =>10,
+			:bind => {
+				:content => 'ProtoOne.imageController.arrangedObjects',
+	 			:selection => 'ProtoOne.imageController.selection'
+			} 
+		%>
+	<% end %>
+
+	<%= image_view :image_view, :tag =>'img',
+		:content_value_key => 'url',
+		:bind => {
+			:content => 'ProtoOne.imageController.selectedImage'
+		}
+	%>
+
+	<div id='metadata'>
+		<%= label_view :tag => 'h3', :content_value_key => 'caption',
+			:bind => { :content => 'ProtoOne.imageController.selection' }
+		%>
+		Author: <%= label_view :tag => 'span', :content_value_key => 'author',
+			:bind => { :content => 'ProtoOne.imageController.selection' }
+		%>
+		<br />
+		Source: <%= label_view :tag => 'span', :content_value_key => 'source',
+			:bind => { :content => 'ProtoOne.imageController.selection' }
+		%>
+	</div>
+
+<% end %>
+
+<% end %>
