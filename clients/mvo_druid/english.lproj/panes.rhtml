@@ -1,3 +1,8 @@
+<!-- title view -->
+
+<%= label_view :title_view, :tag => 'h1', :value => 'Multivio prototype Druid' %>
+
+
 <!-- thumbnail scroll view -->
 
 <% scroll_view :thumbnails_scroll_view do %>
@@ -29,8 +34,8 @@
 
 <!-- metadata view -->
 
-<% scroll_view :metadata do %>
-	<% view :metadata_inner do %>
+<% scroll_view :metadata_scroll_view do %>
+	<% view :metadata_view do %>
 		<%= label_view :tag => 'h3', :content_value_key => 'title',
 			:bind => { :content => 'MvoDruid.thumbnailController.selection' }
 		%>
@@ -51,4 +56,17 @@
 			:bind => { :content => 'MvoDruid.thumbnailController.selection' }
 		%>
 	<% end %>
+<% end %>
+
+
+<!-- toolbox view -->
+
+<% view :toolbox_view do %>
+	<%= button_view :button_toggle_left_pane,
+		:label => loc(%(Switch Left Pane)),
+		:action => 'MvoDruid.paneController.switchLeftPane',
+		:bind => {
+			:value => 'MvoDruid.paneController.isLeftPaneEnabled'
+		}
+	%>
 <% end %>

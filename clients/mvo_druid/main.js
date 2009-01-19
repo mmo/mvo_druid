@@ -25,7 +25,7 @@ function main() {
 	// your app gets any level of complexity, you should just get the views you
 	// need to show the app in the first place, to speed things up.
 	SC.page.awake();
-	MvoDruid.paneController.showIt();
+	MvoDruid.paneController.initializeWorkspace();
 
 	// Step 3. Set the content property on your primary controller.
 	// This will make your app come alive!

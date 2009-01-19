@@ -14,5 +14,6 @@ Object.extend(String.English, {
 	"Author": "Author",
 	"Source": "Source",
 	"License": "License",
-	"Description": "Description"
+	"Description": "Description",
+	"Switch Left Pane": "Switch Left Pane"
 });

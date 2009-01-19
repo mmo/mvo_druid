@@ -31,7 +31,7 @@
  border: 1px solid #000;
 }
 
-.workspace .metadata {
+.workspace .metadata_scroll_view {
  position: absolute;
  top: 0px;
  right: 0px;
@@ -40,7 +40,7 @@
  border: 1px solid #000;
 }
 
-.workspace .metadata_inner {
+.workspace .metadata_view {
  position: absolute;
  top: 0px;
  right: 0px;
