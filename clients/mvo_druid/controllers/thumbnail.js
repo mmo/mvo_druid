@@ -8,7 +8,7 @@ require('core');
 
   (Document Your View Here)
 
-  @extends SC.Object
+  @extends SC.CollectionController
   @author AuthorName
   @version 0.1
   @static
