@@ -53,4 +53,21 @@
  color: #808080;
 }
 
+.workspace .tree_scroll_view {
+ position: absolute;
+ left: 0px;
+ top: 0px;
+ width: 100px;
+ bottom: 0px;
+ border: 1px solid #000;
+}
+
+.workspace .tree_view {
+ position: absolute;
+ top: 0px;
+ right: 0px;
+ left: 0px;
+ bottom: 0px;
+}
+
 /* @end */

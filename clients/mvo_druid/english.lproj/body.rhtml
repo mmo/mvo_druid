@@ -1,3 +1,46 @@
+<% content_for("page_styles") do %>
+
+	<!--
+	Javascript libraries that MUST be loaded BEFORE page load
+	(this should be avoided, because it penalizes page load performance)
+	-->
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="/lib/javascript/jQuery/jquery-1.2.3.js"></script>
+
+	<!-- make jQuery compatible with other libraries (ex: Prototype JS) -->
+	<script type="text/javascript">
+	jQuery.noConflict();
+	</script>
+
+
+	<!--Include YUI Loader: --> 
+	<script type="text/javascript" src="http://yui.yahooapis.com/2.6.0/build/yuiloader/yuiloader-min.js"></script> 
+ 
+	<!--Use YUI Loader to bring in your other dependencies: --> 
+	<script type="text/javascript"> 
+	// Instantiate and configure YUI Loader: 
+	(function() { 
+	    var loader = new YAHOO.util.YUILoader({ 
+	        base: "", 
+	        require: ["treeview"], 
+	        loadOptional: false, 
+	        combine: true, 
+	        filter: "MIN", 
+	        allowRollup: true, 
+	        onSuccess: function() { 
+	            //you can make use of all requested YUI modules 
+	            //here. 
+	        } 
+	    }); 
+ 
+	// Load the files using the insert() method. 
+	loader.insert(); 
+	})(); 
+	</script> 
+
+<% end %>
+
 <!-- main page template -->
 <% content_for('body') do %>
 

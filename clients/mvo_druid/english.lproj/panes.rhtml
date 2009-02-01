@@ -20,6 +20,13 @@
 <% end %>
 
 
+<!-- tree scroll view -->
+
+<% scroll_view :tree_scroll_view do %>
+	<%= view :tree_view, :tag => 'div', :view => 'MvoDruid.TreeView', :class => 'yui-skin-sam' %>
+<% end %>
+
+
 <!-- image view -->
 
 <% scroll_view :image_scroll_view do %>

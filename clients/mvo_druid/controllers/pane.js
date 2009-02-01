@@ -61,7 +61,9 @@ MvoDruid.paneController = SC.Object.create(
 		this.workspaceCentral.appendChild(SC.page.get('imageScrollView'));
 		this.workspaceHeader.appendChild(SC.page.get('titleView'));
 		this.workspaceLeftPane.appendChild(SC.page.get('thumbnailsScrollView'));
-		this.workspaceRightPane.appendChild(SC.page.get('metadataScrollView'));
+		//this.workspaceRightPane.appendChild(SC.page.get('metadataScrollView'));
+		this.workspaceRightPane.appendChild(SC.page.get('treeScrollView'));
+		SC.page.getPath('treeScrollView.treeView').buildTree();
 		this.workspaceFooter.appendChild(SC.page.get('toolboxView'));
 	},
 
@@ -104,7 +106,7 @@ MvoDruid.paneController = SC.Object.create(
 	wsResetPanePosition: function (pane, attribute) {
 		// attribute is valid key?
 		if (pane) {
-			originalValue = pane.get('originalPosition')[attribute];
+			var originalValue = pane.get('originalPosition')[attribute];
 			if (originalValue) {
 				pane.set('style' + this.camelize(attribute), originalValue);
 			}
