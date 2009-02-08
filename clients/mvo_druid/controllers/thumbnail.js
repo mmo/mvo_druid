@@ -32,6 +32,13 @@ MvoDruid.thumbnailController = SC.CollectionController.create(
 		else {
 			return null;
 		}
-	}.property('selection')
+	}.property('selection'),
 
-}) ;
+	/**
+	* Changes the currently selected thumbnail, given the image record's guid
+	*/
+	changeSelection: function (imageGuid) {
+		this.set('selection', [MvoDruid.SampleImage.find(imageGuid)]);
+	}
+
+});

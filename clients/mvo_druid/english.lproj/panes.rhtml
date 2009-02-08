@@ -30,12 +30,14 @@
 <!-- image view -->
 
 <% scroll_view :image_scroll_view do %>
-	<%= image_view :image_view, :tag =>'img',
-		:content_value_key => 'url',
-		:bind => {
-			:content => 'MvoDruid.thumbnailController.selectedThumbnail'
-		}
-	%>
+	<% view :image_wrapper_view do %>
+		<%= image_view :image_view, :tag =>'img',
+			:content_value_key => 'url',
+			:bind => {
+				:content => 'MvoDruid.thumbnailController.selectedThumbnail'
+			}
+		%>
+	<% end %>
 <% end %>
 
 

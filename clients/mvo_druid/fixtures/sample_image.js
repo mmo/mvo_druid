@@ -5,7 +5,7 @@
 require('core');
 
 MvoDruid.FIXTURES = MvoDruid.FIXTURES.concat([
-
+/*
 	{
 		guid: 1,
 		type: 'SampleImage',
@@ -226,7 +226,7 @@ MvoDruid.FIXTURES = MvoDruid.FIXTURES.concat([
 		license: 'Creative Commons: Attribution 2.0 Generic',
 		license_url: 'http://creativecommons.org/licenses/by/2.0/'
 	}
-
+*/
 	/*
 	,
 
