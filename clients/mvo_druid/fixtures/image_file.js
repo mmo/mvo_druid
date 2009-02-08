@@ -1,0 +1,61 @@
+// ==========================================================================
+// MvoDruid.ImageFile Fixtures
+// ==========================================================================
+
+require('core');
+
+MvoDruid.FIXTURES = MvoDruid.FIXTURES.concat([
+
+	{ guid: 'f_1', type: 'SampleImage', url: static_url('photos/VAA1194-01-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-01-screen.gif', treelabel: 'la_2', number: '1' },
+	{ guid: 'f_2', type: 'SampleImage', url: static_url('photos/VAA1194-02-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-02-screen.gif', treelabel: 'la_2', number: '2' },
+	{ guid: 'f_3', type: 'SampleImage', url: static_url('photos/VAA1194-03-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-03-screen.gif', treelabel: 'la_3', number: '3' },
+	{ guid: 'f_4', type: 'SampleImage', url: static_url('photos/VAA1194-04-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-04-screen.gif', treelabel: 'la_4', number: '4' },
+	{ guid: 'f_5', type: 'SampleImage', url: static_url('photos/VAA1194-05-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-05-screen.gif', treelabel: 'la_5', number: '5' },
+	{ guid: 'f_6', type: 'SampleImage', url: static_url('photos/VAA1194-06-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-06-screen.gif', treelabel: 'la_5', number: '6' },
+	{ guid: 'f_7', type: 'SampleImage', url: static_url('photos/VAA1194-07-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-07-screen.gif', treelabel: 'la_6', number: '7' },
+	{ guid: 'f_8', type: 'SampleImage', url: static_url('photos/VAA1194-08-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-08-screen.gif', treelabel: 'la_6', number: '8' },
+	{ guid: 'f_9', type: 'SampleImage', url: static_url('photos/VAA1194-09-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-09-screen.gif', treelabel: 'la_6', number: '9' },
+	{ guid: 'f_10', type: 'SampleImage', url: static_url('photos/VAA1194-10-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-10-screen.gif', treelabel: 'la_6', number: '10' },
+	{ guid: 'f_11', type: 'SampleImage', url: static_url('photos/VAA1194-11-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-11-screen.gif', treelabel: 'la_6', number: '11' },
+	{ guid: 'f_12', type: 'SampleImage', url: static_url('photos/VAA1194-12-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-12-screen.gif', treelabel: 'la_6', number: '12' },
+	{ guid: 'f_13', type: 'SampleImage', url: static_url('photos/VAA1194-13-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-13-screen.gif', treelabel: 'la_6', number: '13' },
+	{ guid: 'f_14', type: 'SampleImage', url: static_url('photos/VAA1194-14-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-14-screen.gif', treelabel: 'la_6', number: '14' },
+	{ guid: 'f_15', type: 'SampleImage', url: static_url('photos/VAA1194-15-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-15-screen.gif', treelabel: 'la_6', number: '15' },
+	{ guid: 'f_16', type: 'SampleImage', url: static_url('photos/VAA1194-16-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-16-screen.gif', treelabel: 'la_6', number: '16' },
+	{ guid: 'f_17', type: 'SampleImage', url: static_url('photos/VAA1194-17-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-17-screen.gif', treelabel: 'la_7', number: '17' },
+	{ guid: 'f_18', type: 'SampleImage', url: static_url('photos/VAA1194-18-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-18-screen.gif', treelabel: 'la_7', number: '18' },
+	{ guid: 'f_19', type: 'SampleImage', url: static_url('photos/VAA1194-19-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-19-screen.gif', treelabel: 'la_8', number: '19' },
+	{ guid: 'f_20', type: 'SampleImage', url: static_url('photos/VAA1194-20-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-20-screen.gif', treelabel: 'la_8', number: '20' },
+	{ guid: 'f_21', type: 'SampleImage', url: static_url('photos/VAA1194-21-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-21-screen.gif', treelabel: 'la_9', number: '21' },
+	{ guid: 'f_22', type: 'SampleImage', url: static_url('photos/VAA1194-22-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-22-screen.gif', treelabel: 'la_9', number: '22' },
+	{ guid: 'f_23', type: 'SampleImage', url: static_url('photos/VAA1194-23-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-23-screen.gif', treelabel: 'la_9', number: '23' },
+	{ guid: 'f_24', type: 'SampleImage', url: static_url('photos/VAA1194-24-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-24-screen.gif', treelabel: 'la_9', number: '24' },
+	{ guid: 'f_25', type: 'SampleImage', url: static_url('photos/VAA1194-25-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-25-screen.gif', treelabel: 'la_9', number: '25' },
+	{ guid: 'f_26', type: 'SampleImage', url: static_url('photos/VAA1194-26-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-26-screen.gif', treelabel: 'la_9', number: '26' },
+	{ guid: 'f_27', type: 'SampleImage', url: static_url('photos/VAA1194-27-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-27-screen.gif', treelabel: 'la_9', number: '27' },
+	{ guid: 'f_28', type: 'SampleImage', url: static_url('photos/VAA1194-28-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-28-screen.gif', treelabel: 'la_9', number: '28' },
+	{ guid: 'f_29', type: 'SampleImage', url: static_url('photos/VAA1194-29-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-29-screen.gif', treelabel: 'la_10', number: '29' },
+	{ guid: 'f_30', type: 'SampleImage', url: static_url('photos/VAA1194-30-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-30-screen.gif', treelabel: 'la_10', number: '30' },
+	{ guid: 'f_31', type: 'SampleImage', url: static_url('photos/VAA1194-31-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-31-screen.gif', treelabel: 'la_10', number: '31' },
+	{ guid: 'f_32', type: 'SampleImage', url: static_url('photos/VAA1194-32-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-32-screen.gif', treelabel: 'la_10', number: '32' },
+	{ guid: 'f_33', type: 'SampleImage', url: static_url('photos/VAA1194-33-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-33-screen.gif', treelabel: 'la_10', number: '33' },
+	{ guid: 'f_34', type: 'SampleImage', url: static_url('photos/VAA1194-34-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-34-screen.gif', treelabel: 'la_10', number: '34' },
+	{ guid: 'f_35', type: 'SampleImage', url: static_url('photos/VAA1194-35-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-35-screen.gif', treelabel: 'la_10', number: '35' },
+	{ guid: 'f_36', type: 'SampleImage', url: static_url('photos/VAA1194-36-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-36-screen.gif', treelabel: 'la_10', number: '36' },
+	{ guid: 'f_37', type: 'SampleImage', url: static_url('photos/VAA1194-37-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-37-screen.gif', treelabel: 'la_10', number: '37' },
+	{ guid: 'f_38', type: 'SampleImage', url: static_url('photos/VAA1194-38-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-38-screen.gif', treelabel: 'la_10', number: '38' },
+	{ guid: 'f_39', type: 'SampleImage', url: static_url('photos/VAA1194-39-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-39-screen.gif', treelabel: 'la_10', number: '39' },
+	{ guid: 'f_40', type: 'SampleImage', url: static_url('photos/VAA1194-40-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-40-screen.gif', treelabel: 'la_10', number: '40' },
+	{ guid: 'f_41', type: 'SampleImage', url: static_url('photos/VAA1194-41-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-41-screen.gif', treelabel: 'la_10', number: '41' },
+	{ guid: 'f_42', type: 'SampleImage', url: static_url('photos/VAA1194-42-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-42-screen.gif', treelabel: 'la_10', number: '42' },
+	{ guid: 'f_43', type: 'SampleImage', url: static_url('photos/VAA1194-43-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-43-screen.gif', treelabel: 'la_10', number: '43' },
+	{ guid: 'f_44', type: 'SampleImage', url: static_url('photos/VAA1194-44-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-44-screen.gif', treelabel: 'la_10', number: '44' },
+	{ guid: 'f_45', type: 'SampleImage', url: static_url('photos/VAA1194-45-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-45-screen.gif', treelabel: 'la_10', number: '45' },
+	{ guid: 'f_46', type: 'SampleImage', url: static_url('photos/VAA1194-46-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-46-screen.gif', treelabel: 'la_10', number: '46' },
+	{ guid: 'f_47', type: 'SampleImage', url: static_url('photos/VAA1194-47-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-47-screen.gif', treelabel: 'la_10', number: '47' },
+	{ guid: 'f_48', type: 'SampleImage', url: static_url('photos/VAA1194-48-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-48-screen.gif', treelabel: 'la_10', number: '48' },
+	{ guid: 'f_49', type: 'SampleImage', url: static_url('photos/VAA1194-49-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-49-screen.gif', treelabel: 'la_10', number: '49' },
+	{ guid: 'f_50', type: 'SampleImage', url: static_url('photos/VAA1194-50-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-50-screen.gif', treelabel: 'la_10', number: '50' },
+	{ guid: 'f_51', type: 'SampleImage', url: static_url('photos/VAA1194-51-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-51-screen.gif', treelabel: 'la_12', number: '51'}
+
+]);
