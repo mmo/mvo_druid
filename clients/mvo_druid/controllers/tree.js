@@ -32,8 +32,7 @@ MvoDruid.treeController = SC.Object.create(
 	
 	treeSelectionDidChange: function () {
 		// the selected tree node is synchronized with the selected file
-		// TODO: find a better way of handling the guid's here
-		MvoDruid.thumbnailController.changeSelection(MvoDruid.TreeNode.find(this.get('treeSelection')).get('fileguid'));
+		MvoDruid.thumbnailController.changeSelection(this.get('treeSelection').fileguid);
 		//alert('treeSelectionDidChange: ' + this.get('treeSelection') + ' => ' + MvoDruid.TreeNode.find(this.get('treeSelection')).get('fileguid'));
 	}.observes('treeSelection'),
 

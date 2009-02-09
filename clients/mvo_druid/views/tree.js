@@ -65,7 +65,7 @@ MvoDruid.TreeView = SC.View.extend(SC.Control,
 		// subscribe to the labelClick event on every tree node
 		treeWidget.subscribe('labelClick', function (node) {
 			// when a tree node is selected, update the selection in the controller
-			MvoDruid.treeController.set('treeSelection', node.data.guid);
+			MvoDruid.treeController.set('treeSelection', node.data);
 		});
 
 		treeWidget.render();
@@ -80,7 +80,12 @@ MvoDruid.TreeView = SC.View.extend(SC.Control,
 
 		// add node to the tree
 		var currentWidgetNode = new YAHOO.widget.TextNode(
-			{ label: treeNode.get('label'), guid: treeNode.get('guid'), expanded: true },
+			{
+				label: treeNode.get('label'),
+				guid: treeNode.get('guid'),
+				fileguid: treeNode.get('fileguid'),
+				expanded: true
+			},
 			parentWidgetNode);
 
 		// mark node as added
