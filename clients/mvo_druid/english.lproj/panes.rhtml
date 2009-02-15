@@ -34,7 +34,7 @@
 		<%= image_view :image_view, :tag =>'img',
 			:content_value_key => 'url',
 			:bind => {
-				:content => 'MvoDruid.thumbnailController.selectedThumbnail'
+				:content => 'MvoDruid.masterController.selectedObject'
 			}
 		%>
 	<% end %>
@@ -46,23 +46,23 @@
 <% scroll_view :metadata_scroll_view do %>
 	<% view :metadata_view do %>
 		<%= label_view :tag => 'h3', :content_value_key => 'title',
-			:bind => { :content => 'MvoDruid.thumbnailController.selection' }
+			:bind => { :content => 'MvoDruid.masterController.selectedObject' }
 		%>
 		<%= loc(%(Author)) %>: <%= label_view :tag => 'span', :content_value_key => 'author',
-			:bind => { :content => 'MvoDruid.thumbnailController.selection' }
+			:bind => { :content => 'MvoDruid.masterController.selectedObject' }
 		%>
 		<br />
 		<%= loc(%(Source)) %>: <%= label_view :tag => 'span', :content_value_key => 'source_url',
-			:bind => { :content => 'MvoDruid.thumbnailController.selection' }
+			:bind => { :content => 'MvoDruid.masterController.selectedObject' }
 		%>
 		<br />
 		<%= loc(%(License)) %>: <%= label_view :tag => 'span', :content_value_key => 'license',
-			:bind => { :content => 'MvoDruid.thumbnailController.selection' }
+			:bind => { :content => 'MvoDruid.masterController.selectedObject' }
 		%>
 		<br />
 		<%= loc(%(Description)) %>: <%= label_view :tag => 'span', :content_value_key => 'caption',
 			:escape_html => false,
-			:bind => { :content => 'MvoDruid.thumbnailController.selection' }
+			:bind => { :content => 'MvoDruid.masterController.selectedObject' }
 		%>
 	<% end %>
 <% end %>

@@ -41,9 +41,7 @@ MvoDruid.TreeView = SC.View.extend(SC.Control,
     },
 
 	/**
-	* Render the tree widget
-	*
-	* @param {string} guid of the TreeNode record for the root of three
+	Render the tree widget
 	*/
 	buildTree: function () {
 
@@ -73,6 +71,8 @@ MvoDruid.TreeView = SC.View.extend(SC.Control,
 	
 	/*
 	* Adds a node to the tree widget
+	@param {String} nodeGuid the guid of a {@link MvoDruid.TreeNode} object
+	@param {YAHOO.widget.TextNode} parentWidgetNode
 	*/
 	addNode: function (nodeGuid, parentWidgetNode) {
 		// fetch the TreeNode record from the store

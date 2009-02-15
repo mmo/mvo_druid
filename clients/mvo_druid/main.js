@@ -30,6 +30,14 @@ function main() {
 	// Step 3. Set the content property on your primary controller.
 	// This will make your app come alive!
 	var imageCollection = MvoDruid.SampleImage.collection();
+
+	MvoDruid.masterController.set('content', imageCollection); // TODO: should be a MvoDruid.CoreNode collection
+	// TODO: whose responsibility is it to initialize interface components,
+	// such as thumbnailController, zoomController, metadataController and such?
 	MvoDruid.thumbnailController.set('content', imageCollection);
+
 	imageCollection.refresh();
+
+	// initialize master object selection with the first object in its collection
+	MvoDruid.masterController.changeSelection(imageCollection.records().objectAt(0).guid);
 }

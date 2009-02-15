@@ -30,16 +30,26 @@ MvoDruid.treeController = SC.Object.create(
 		}
 	},
 	
+	/**
+	 */
 	treeSelectionDidChange: function () {
-		// the selected tree node is synchronized with the selected file
-		MvoDruid.thumbnailController.changeSelection(this.get('treeSelection').fileguid);
-		//alert('treeSelectionDidChange: ' + this.get('treeSelection') + ' => ' + MvoDruid.TreeNode.find(this.get('treeSelection')).get('fileguid'));
+		// update the master object selection if needed
+		var selectedTreeNode = this.get('treeSelection');
+		if (selectedTreeNode &&
+			selectedTreeNode.fileguid !== MvoDruid.masterController.get('selectedObjectId')) {
+			// NOTE: the above condition is used to avoid an infinite loop of
+			// change notifications between the two controllers (this and master's)
+			MvoDruid.masterController.changeSelection(selectedTreeNode.fileguid);
+		}
 	}.observes('treeSelection'),
 
-	fileSelectionDidChange: function () {
-		// TODO
-		// IMPORTANT: an infinite notification loop must be avoided between file and tree node selection
-		//alert('fileSelectionDidChange: ' + MvoDruid.thumbnailController.selection().get('guid'));
-	}.observes('MvoDruid.thumbnailController.selection')
+	/**
+	Observes changes in masters' object selection
+	@param {String} guid the guid of an object of type MvoDruid.CoreNode
+	 */
+	masterObjectSelectionDidChange: function () {
+		// TODO: update selected tree node in the widget
+		console.log('MvoDruid.treeController.masterObjectSelectionDidChange: ' + MvoDruid.masterController.get('selectedObjectId'));
+	}.observes('MvoDruid.masterController.selectedObjectId')
 
 });

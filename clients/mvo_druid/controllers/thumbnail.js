@@ -21,9 +21,13 @@ MvoDruid.thumbnailController = SC.CollectionController.create(
 	allowsMultipleSelection: false,
 
 	/**
-	Indicates the currently (single) selected thumbnail.
-	If the current selection contains more than one thumbnail,
-	the first one is indicated.
+	@property
+
+	Given that SC.CollectionController supports multiple selection, this
+	function indicates a single object (the first one) in the current
+	selection, even if multiple objects are currently selected
+	@returns the currently (single) selected thumbnail
+	@type {MvoDruid.SampleImage}
 	*/
 	selectedThumbnail: function () {
 		if (this.get('selection')) {
@@ -35,10 +39,40 @@ MvoDruid.thumbnailController = SC.CollectionController.create(
 	}.property('selection'),
 
 	/**
-	* Changes the currently selected thumbnail, given the image record's guid
-	*/
+	Changes the currently selected thumbnail, given the image record's guid
+	@param {String} imageGuid the guid of an object of type {@link MvoDruid.CoreNode}
+	 */
 	changeSelection: function (imageGuid) {
-		this.set('selection', [MvoDruid.SampleImage.find(imageGuid)]);
-	}
+		var imageObject = MvoDruid.SampleImage.find(imageGuid);
+		if (imageObject) {
+			// note: selection is set as an array with a single element
+			this.set('selection', [imageObject]);
+		}
+	},
+
+	/**
+	 */
+	thumbnailSelectionDidChange: function () {
+		// update the master object selection if needed
+		var selectedThumbnail = this.get('selectedThumbnail');
+		if (selectedThumbnail &&
+			selectedThumbnail.guid !== MvoDruid.masterController.get('selectedObjectId')) {
+			// NOTE: the above condition is used to avoid an infinite loop of
+			// change notifications between the two controllers (this and master's)
+			MvoDruid.masterController.changeSelection(selectedThumbnail.guid);
+		}
+	}.observes('selection'),
+
+	/**
+	Observes changes in masters' object selection
+	@param {String} guid the guid of an object of type MvoDruid.CoreNode
+	 */
+	masterObjectSelectionDidChange: function () {
+		// update thumbnail selection accordingly
+		// NOTE: we're assuming here that the guid of the master controller's
+		// selected object is the same as the corresponding thumbnail's guid;
+		// that may not be the case (a translation guid->guid may be needed)
+		this.changeSelection(MvoDruid.masterController.get('selectedObjectId'));
+	}.observes('MvoDruid.masterController.selectedObjectId')
 
 });
