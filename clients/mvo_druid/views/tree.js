@@ -32,13 +32,11 @@ MvoDruid.TreeView = SC.View.extend(SC.Control,
 		
 		var html = [];
 
-		/*
-        html.push('my content');
+		//html.push('my content');
 
         // Finally set the innerHTML of the view
-        this.set('innerHTML', html);
-		*/
-		
+		//this.set('innerHTML', html);
+
 		//jQuery('#tree_view').html('Hello World!').css('color', 'red');
     },
 
