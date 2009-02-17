@@ -55,10 +55,12 @@ MvoDruid.thumbnailController = SC.CollectionController.create(
 	thumbnailSelectionDidChange: function () {
 		// update the master object selection if needed
 		var selectedThumbnail = this.get('selectedThumbnail');
+        //alert('selectedThumbnail '+selectedThumbnail);
 		if (selectedThumbnail &&
 			selectedThumbnail.guid !== MvoDruid.masterController.get('selectedObjectId')) {
 			// NOTE: the above condition is used to avoid an infinite loop of
 			// change notifications between the two controllers (this and master's)
+            console.log('MvoDruid.thumbnailController.change(masterController) '+selectedThumbnail.guid);
 			MvoDruid.masterController.changeSelection(selectedThumbnail.guid);
 		}
 	}.observes('selection'),

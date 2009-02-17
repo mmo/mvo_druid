@@ -39,5 +39,5 @@ function main() {
 	imageCollection.refresh();
 
 	// initialize master object selection with the first object in its collection
-	MvoDruid.masterController.changeSelection(imageCollection.records().objectAt(0).guid);
+	//MvoDruid.masterController.changeSelection(imageCollection.records().objectAt(0).guid);
 }

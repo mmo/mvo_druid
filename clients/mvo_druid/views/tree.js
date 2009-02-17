@@ -23,6 +23,7 @@ MvoDruid.TreeView = SC.View.extend(SC.Control,
 
 	// dictionary: file guid => tree node
 	fileToTreeNode: [],
+    
 
 	/*
 	* Initialize the view object
@@ -48,7 +49,7 @@ MvoDruid.TreeView = SC.View.extend(SC.Control,
 		// Tree widget implemented with YUI TreeView
 		// See http://developer.yahoo.com/yui/treeview/
 		// Every TreeNode is an object with a type: 'text' and a label:
-		var treeWidget = new YAHOO.widget.TreeView('tree_view');
+        var treeWidget = new YAHOO.widget.TreeView('tree_view');
 
 		// fetch TreeNode records from the store and add them to the tree widget
 		var treeNodeRecords = MvoDruid.TreeNode.findAll();
@@ -63,7 +64,7 @@ MvoDruid.TreeView = SC.View.extend(SC.Control,
 		// subscribe to the labelClick event on every tree node
 		treeWidget.subscribe('labelClick', function (node) {
 			// when a tree node is selected, update the selection in the controller
-			MvoDruid.treeController.set('treeSelection', node.data);
+            MvoDruid.treeController.set('treeSelection', node.data.fileguid);
 		});
 
 		treeWidget.render();
@@ -90,9 +91,8 @@ MvoDruid.TreeView = SC.View.extend(SC.Control,
 
 		// mark node as added
 		this.handledNodes[nodeGuid] = true;
-		
-		// update dictionary: file guid => tree node
-		this.fileToTreeNode[treeNode.get('fileguid')] = currentWidgetNode;
+		// update dictionary: guid => tree node
+		this.fileToTreeNode[treeNode.get('guid')] = currentWidgetNode;
 
 		// add children
 		var nodeChildren = treeNode.get('children');
@@ -102,11 +102,14 @@ MvoDruid.TreeView = SC.View.extend(SC.Control,
 			}
 		}
 	},
-	
+
 	// update selected node in the tree widget
 	selectNode: function () {
 		// TODO
+        var guidOfNode = MvoDruid.SampleImage.find(MvoDruid.treeController.get('treeSelection')).get('treelabel');
 		// (use fileToTreeNode dictionary to know which YAHOO.widget.TextNode to touch...)
+        var nodeToFocus = this.fileToTreeNode[guidOfNode];
+        nodeToFocus.focus();
 	}.observes('MvoDruid.treeController.treeSelection')
 
 });

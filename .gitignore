@@ -4,3 +4,4 @@ frameworks
 lib
 log
 public
+*.project
