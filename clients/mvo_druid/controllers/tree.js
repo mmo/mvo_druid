@@ -18,8 +18,9 @@ MvoDruid.treeController = SC.Object.create(
 
 	// guid of the currently selected tree node
 	treeSelection: undefined,
-
-	init: function () {
+    
+    //needed ?
+	/*init: function () {
 		sc_super();
 
 		// fetch TreeNode records from the store
@@ -28,7 +29,7 @@ MvoDruid.treeController = SC.Object.create(
 		for (var idx = 0; idx < treeNodeRecords.length; idx++) {
 			this.fileToTreeLabel[treeNodeRecords[idx].fileguid] = treeNodeRecords[idx].guid;
 		}
-	},
+	},*/
 	
 	/**
 	 */
