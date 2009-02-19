@@ -39,7 +39,7 @@ MvoDruid.masterController = SC.CollectionController.create(
 	@param {String} the guid of an object of type MvoDruid.CoreNode (TODO: not yet! for now it's of type MvoDruid.SampleImage)
 	 */
 	changeSelection: function (guid) {
-        console.log('mastercontroller.changeSelection '+guid);
+        console.log('mastercontroller.changeSelection ' + guid);
 		this.set('selectedObjectId', guid);
 	}
 
