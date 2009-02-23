@@ -59,6 +59,7 @@ MvoDruid.thumbnailController = SC.CollectionController.create(
 			selectedThumbnail.guid !== MvoDruid.masterController.get('selectedObjectId')) {
 			// NOTE: the above condition is used to avoid an infinite loop of
 			// change notifications between the two controllers (this and master's)
+            console.log('MvoDruid.thumbnailController.change(masterController) ' + selectedThumbnail.guid);
 			MvoDruid.masterController.changeSelection(selectedThumbnail.guid);
 		}
 	}.observes('selection'),
