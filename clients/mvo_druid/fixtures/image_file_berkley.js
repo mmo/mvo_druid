@@ -4,7 +4,7 @@
 
 require('core');
 
-MvoDruid.FIXTURES_ = MvoDruid.FIXTURES_.concat([
+MvoDruid.FIXTURES_berkley = MvoDruid.FIXTURES_berkley.concat([
 
 	{ guid: 'f_000001_b', type: 'SampleImage', url: static_url('photos/berkley/bk000385t0q.jpg'), image_url: 'http://digitalassets.lib.berkeley.edu/jpnprints/ucm/images/ucm_li_2001_014a_k.jpg', treelabel: 'la_000001_b', number: '1' },
 	{ guid: 'f_000002_b', type: 'SampleImage', url: static_url('photos/berkley/bk000385s5z.jpg'), image_url: 'http://digitalassets.lib.berkeley.edu/jpnprints/ucm/images/ucm_li_2001_014b_k.jpg', treelabel: 'la_000002_b', number: '2' },

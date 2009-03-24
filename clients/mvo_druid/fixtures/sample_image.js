@@ -2,9 +2,9 @@
 // MvoDruid.SampleImage Fixtures
 // ==========================================================================
 
-require('core');
+//require('core');
 
-MvoDruid.FIXTURES = MvoDruid.FIXTURES.concat([
+//MvoDruid.FIXTURES = MvoDruid.FIXTURES.concat([
 /*
 	{
 		guid: 1,
@@ -241,4 +241,4 @@ MvoDruid.FIXTURES = MvoDruid.FIXTURES.concat([
 	}
 	*/
 
-]);
+//]);

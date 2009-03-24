@@ -4,7 +4,7 @@
 
 require('core');
 
-MvoDruid.FIXTURES__ = MvoDruid.FIXTURES__.concat([
+MvoDruid.FIXTURES_rerodoc = MvoDruid.FIXTURES_rerodoc.concat([
 
     { guid: 'la_000001_r', type: 'TreeNode', label: 'Tome 3', fileguid: 'f_000001_r', children: ['la_000002_r', 'la_000003_r', 'la_000004_r', 'la_000005_r'] },
 	{ guid: 'la_000002_r', type: 'TreeNode', label: 'page de titre', fileguid: 'f_000001_r' },
@@ -26,4 +26,5 @@ MvoDruid.FIXTURES__ = MvoDruid.FIXTURES__.concat([
 	{ guid: 'la_000018_r', type: 'TreeNode', label: 'Pl 42', fileguid: 'f_000016_r' },
 	{ guid: 'la_000019_r', type: 'TreeNode', label: 'Pl 47', fileguid: 'f_000017_r' },
 	{ guid: 'la_000020_r', type: 'TreeNode', label: 'Pl 49', fileguid: 'f_000018_r' }
-	]);
+    
+]);

@@ -4,7 +4,7 @@
 
 require('core');
 
-MvoDruid.FIXTURES = MvoDruid.FIXTURES.concat([
+MvoDruid.FIXTURES_indiana = MvoDruid.FIXTURES_indiana.concat([
 
 	{ guid: 'la_000001', type: 'TreeNode', label: 'Front Matter', fileguid: 'f_000001', children: ['la_000002', 'la_000003', 'la_000004', 'la_000005'] },
 	{ guid: 'la_000002', type: 'TreeNode', label: 'Cover', fileguid: 'f_000001' },

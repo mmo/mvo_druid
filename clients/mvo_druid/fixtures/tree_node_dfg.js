@@ -1,10 +1,10 @@
 // ==========================================================================
 // MvoDruid.TreeNode Fixtures
 // ==========================================================================
-
+/*jslint white: true */
 require('core');
 
-MvoDruid.FIXTURES___ = MvoDruid.FIXTURES___.concat([
+MvoDruid.FIXTURES_dfg = MvoDruid.FIXTURES_dfg.concat([
 
 	{ guid: 'la_000001_d', type: 'TreeNode', label: 'Titelblatt', fileguid: 'f_000001_d' },
 	{ guid: 'la_000002_d', type: 'TreeNode', label: 'Von der Schwangerschaft', fileguid: 'f_000003_d' },
@@ -19,5 +19,6 @@ MvoDruid.FIXTURES___ = MvoDruid.FIXTURES___.concat([
 	{ guid: 'la_000011_d', type: 'TreeNode', label: 'Ein ander k&ouml;stlich und gut Aquavit, des Tugend man nicht genug loben noch beschreiben kann, dienet zu allen Gebrechen und Krankheiten des Leibes', fileguid: 'f_000048_d' },
 	{ guid: 'la_000012_d', type: 'TreeNode', label: 'Von der Zergliederung', fileguid: 'f_000050_d' },
 	{ guid: 'la_000013_d', type: 'TreeNode', label: 'Der kaiserlische Schnidt', fileguid: 'f_000051_d' },
-	{ guid: 'la_000014_d', type: 'TreeNode', label: 'Auserlesene Recepten', fileguid: 'f_000056_d' },
-	]);
+	{ guid: 'la_000014_d', type: 'TreeNode', label: 'Auserlesene Recepten', fileguid: 'f_000056_d' }
+    
+]);

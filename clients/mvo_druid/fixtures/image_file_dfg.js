@@ -4,7 +4,7 @@
 
 require('core');
 
-MvoDruid.FIXTURES___ = MvoDruid.FIXTURES___.concat([
+MvoDruid.FIXTURES_dfg = MvoDruid.FIXTURES_dfg.concat([
 
 	{ guid: 'f_000001_d', type: 'SampleImage', url: static_url('photos/dfg/00000001.jpg'), image_url: 'http://gdz-srv1.sub.uni-goettingen.de/content/PPN240627504/800/0/00000001.jpg', treelabel: 'la_000001_d', number: '1' },
 	{ guid: 'f_000002_d', type: 'SampleImage', url: static_url('photos/dfg/00000002.jpg'), image_url: 'http://gdz-srv1.sub.uni-goettingen.de/content/PPN240627504/800/0/00000002.jpg', treelabel: 'la_000001_d', number: '2' },
@@ -69,6 +69,6 @@ MvoDruid.FIXTURES___ = MvoDruid.FIXTURES___.concat([
 	{ guid: 'f_000061_d', type: 'SampleImage', url: static_url('photos/dfg/00000061.jpg'), image_url: 'http://gdz-srv1.sub.uni-goettingen.de/content/PPN240627504/800/0/00000061.jpg', treelabel: 'la_000014_d', number: '61' },
 	{ guid: 'f_000062_d', type: 'SampleImage', url: static_url('photos/dfg/00000062.jpg'), image_url: 'http://gdz-srv1.sub.uni-goettingen.de/content/PPN240627504/800/0/00000062.jpg', treelabel: 'la_000014_d', number: '62' },
 	{ guid: 'f_000063_d', type: 'SampleImage', url: static_url('photos/dfg/00000063.jpg'), image_url: 'http://gdz-srv1.sub.uni-goettingen.de/content/PPN240627504/800/0/00000063.jpg', treelabel: 'la_000014_d', number: '63' },
-	{ guid: 'f_000064_d', type: 'SampleImage', url: static_url('photos/dfg/00000064.jpg'), image_url: 'http://gdz-srv1.sub.uni-goettingen.de/content/PPN240627504/800/0/00000064.jpg', treelabel: 'la_000014_d', number: '64' },
+	{ guid: 'f_000064_d', type: 'SampleImage', url: static_url('photos/dfg/00000064.jpg'), image_url: 'http://gdz-srv1.sub.uni-goettingen.de/content/PPN240627504/800/0/00000064.jpg', treelabel: 'la_000014_d', number: '64' }
 
 ]);

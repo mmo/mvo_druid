@@ -19,12 +19,12 @@
 
 
 	<!--Include YUI Loader: --> 
-	<script type="text/javascript" src="http://yui.yahooapis.com/2.6.0/build/yuiloader/yuiloader-min.js"></script> 
+	<!-- script type="text/javascript" src="http://yui.yahooapis.com/2.6.0/build/yuiloader/yuiloader-min.js"></script --> 
  
 	<!--Use YUI Loader to bring in your other dependencies: --> 
-	<script type="text/javascript"> 
+	<!-- script type="text/javascript"> 
 	// Instantiate and configure YUI Loader: 
-	(function() { 
+	(function() {
 	    var loader = new YAHOO.util.YUILoader({ 
 	        base: "", 
 	        require: ["treeview"], 
@@ -41,7 +41,17 @@
 	// Load the files using the insert() method. 
 	loader.insert(); 
 	})(); 
-	</script> 
+	</script -->
+
+<!-- Individual YUI CSS files -->
+<link rel="stylesheet" type="text/css" href="/lib/yui/treeview/assets/skins/sam/treeview.css">
+<!-- Individual YUI JS files -->
+<script type="text/javascript" src="/lib/yui/yahoo/yahoo.js"></script>
+<script type="text/javascript" src="/lib/yui/event/event.js"></script>
+<script type="text/javascript" src="/lib/yui/dom/dom.js"></script>
+<script type="text/javascript" src="/lib/yui/json/json.js"></script>
+<script type="text/javascript" src="/lib/yui/treeview/treeview.js"></script>
+
 
 <% end %>
 
