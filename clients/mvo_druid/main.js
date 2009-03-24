@@ -15,7 +15,7 @@ function main() {
 	// The default code here will load the fixtures you have defined.
 	// Comment out the preload line and add something to refresh from the server
 	// when you are ready to pull data from your server.
-	MvoDruid.server.preload(MvoDruid.FIXTURES);
+	MvoDruid.server.preload(MvoDruid.FIXTURES_rerodoc);
 
 	// refresh() any collections you have created to get their records.
 	// ex: MvoDruid.contacts.refresh() ;
