@@ -37,7 +37,7 @@
  right: 0px;
  left: 0px;
  bottom: 0px;
- border: 1px solid #000;
+ /*border: 1px solid #000;*/
 }
 
 .workspace .metadata_view {
@@ -57,7 +57,7 @@
  position: absolute;
  left: 0px;
  top: 0px;
- width: 200px;
+ width: 160px;
  bottom: 0px;
  border: 1px solid #000;
 }

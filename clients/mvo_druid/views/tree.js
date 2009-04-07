@@ -6,7 +6,14 @@ require('core');
 
 /** @class
 
-  (Document Your View Here)
+  This custom view provides a tree widget for navigating the document structure.
+
+  Instead of using a SC native tree widget (not yet available) it embeds a
+  YUI TreeView widget. Note that all the details of the YUI TreeView object are
+  contained in this class, no other part of the application know about its
+  existance. Hence, we can later replace YUI TreeView by another widget, from a
+  different JavaScript library available, without disturbing the rest of the
+  application.
 
   @extends SC.View
   @author AuthorName
@@ -105,11 +112,23 @@ MvoDruid.TreeView = SC.View.extend(SC.Control,
 
 	// update selected node in the tree widget
 	selectNode: function () {
+
+
+        var treeSelection = MvoDruid.treeController.get('treeSelection');
+        var treeSelectionInDataSource = MvoDruid.SampleImage.find(treeSelection);
+        var treeLabel = treeSelectionInDataSource.get('treelabel');
+        var guidOfNode = treeLabel;
+
+
 		// TODO
-        var guidOfNode = MvoDruid.SampleImage.find(MvoDruid.treeController.get('treeSelection')).get('treelabel');
+        //var guidOfNode = MvoDruid.SampleImage.find(MvoDruid.treeController.get('treeSelection')).get('treelabel');
 		// (use fileToTreeNode dictionary to know which YAHOO.widget.TextNode to touch...)
-        var nodeToFocus = this.fileToTreeNode[guidOfNode];
-        nodeToFocus.focus();
+		if (guidOfNode) {
+        	var nodeToFocus = this.fileToTreeNode[guidOfNode];
+			if (nodeToFocus) {
+	        	nodeToFocus.focus();
+			}
+		}
 	}.observes('MvoDruid.treeController.treeSelection')
 
 });

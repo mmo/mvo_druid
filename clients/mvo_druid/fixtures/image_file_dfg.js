@@ -6,6 +6,8 @@ require('core');
 
 MvoDruid.FIXTURES_dfg = MvoDruid.FIXTURES_dfg.concat([
 
+	{ guid: 'metadata', type: 'Metadata', author: '', title: 'Kurzgefaßtes Weiber-Büchlein' },
+
 	{ guid: 'f_000001_d', type: 'SampleImage', url: static_url('photos/dfg/00000001.jpg'), image_url: 'http://gdz-srv1.sub.uni-goettingen.de/content/PPN240627504/800/0/00000001.jpg', treelabel: 'la_000001_d', number: '1' },
 	{ guid: 'f_000002_d', type: 'SampleImage', url: static_url('photos/dfg/00000002.jpg'), image_url: 'http://gdz-srv1.sub.uni-goettingen.de/content/PPN240627504/800/0/00000002.jpg', treelabel: 'la_000001_d', number: '2' },
 	{ guid: 'f_000003_d', type: 'SampleImage', url: static_url('photos/dfg/00000003.jpg'), image_url: 'http://gdz-srv1.sub.uni-goettingen.de/content/PPN240627504/800/0/00000003.jpg', treelabel: 'la_000002_d', number: '3' },

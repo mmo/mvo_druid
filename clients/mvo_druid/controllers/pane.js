@@ -6,7 +6,22 @@ require('core');
 
 /** @class
 
-  (Document Your View Here)
+  This class handles the positioning of the interface components on the screen.
+
+  It defines a layout with different regions header/left/central/right/footer,
+  and attaches available widgets (components) to each region.
+
+  +-----------------------------------+
+  | header                            |
+  +-----------------------------------+
+  | left   | central         | right  |
+  |        |                 |        |
+  |        |                 |        |
+  |        |                 |        |
+  |        |                 |        |
+  +-----------------------------------+
+  | footer                            |
+  +-----------------------------------+
 
   @extends SC.Object
   @author AuthorName
@@ -35,17 +50,21 @@ MvoDruid.paneController = SC.Object.create(
 
 	This function must hence be explicitly called from the main() function
 	during application setup.
+	
+	Note: the values below are not quite right; the way this "originalPosition"
+	feature is implemented here forces these values to be synchronized with
+	those in the CSS, which is not necessarily the case.
 	*/
 	initializeWorkspace: function () {
 		this.workspaceCentral = SC.page.getPath('workspace.central').
 			set('originalPosition',
-				{ left: '210', top: '110', right: '210', bottom: '60' });
+				{ left: '110', top: '70', right: '210', bottom: '60' });
 		this.workspaceHeader = SC.page.getPath('workspace.header').
 			set('originalPosition',
 				{ left: '0', top: '0', right: '210', bottom: '60' });
 		this.workspaceLeftPane = SC.page.getPath('workspace.leftPane').
 			set('originalPosition',
-				{ left: '210', top: '110', right: '210', bottom: '60' });
+				{ left: '0', top: '70', right: '210', bottom: '60' });
 		this.workspaceRightPane = SC.page.getPath('workspace.rightPane').
 			set('originalPosition',
 				{ left: '210', top: '110', right: '210', bottom: '60' });
@@ -57,9 +76,13 @@ MvoDruid.paneController = SC.Object.create(
 		this.showAllPanes();
 	},
 
+	/**
+	Place the interface components in the apprpriate region of the layout
+	*/
 	attachChildren: function () {
 		this.workspaceCentral.appendChild(SC.page.get('imageScrollView'));
-		this.workspaceHeader.appendChild(SC.page.get('titleView'));
+		//this.workspaceHeader.appendChild(SC.page.get('titleView'));
+		this.workspaceHeader.appendChild(SC.page.get('metadataScrollView'));
 		this.workspaceLeftPane.appendChild(SC.page.get('thumbnailsScrollView'));
 		//this.workspaceRightPane.appendChild(SC.page.get('metadataScrollView'));
 		this.workspaceRightPane.appendChild(SC.page.get('treeScrollView'));

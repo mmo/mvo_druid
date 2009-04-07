@@ -50,13 +50,12 @@ MvoDruid.treeController = SC.Object.create(
 	 */
 	masterObjectSelectionDidChange: function () {
 		// TODO: update selected tree node in the widget
+		var masterSelection = MvoDruid.masterController.get('selectedObjectId');
 		console.log(
-			'MvoDruid.treeController.masterObjectSelectionDidChange: ' +
-			MvoDruid.masterController.get('selectedObjectId')
-		);
-        if (this.treeSelection !== MvoDruid.masterController.get('selectedObjectId')) {
-            this.set('treeSelection', MvoDruid.masterController.get('selectedObjectId'));
-        }
+			'MvoDruid.treeController.masterObjectSelectionDidChange: ' + masterSelection);
+        if (masterSelection && this.treeSelection !== masterSelection) {
+			this.set('treeSelection', masterSelection);
+		}
 	}.observes('MvoDruid.masterController.selectedObjectId')
 
 });

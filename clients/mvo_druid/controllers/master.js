@@ -6,7 +6,11 @@ require('core');
 
 /** @class
 
-  (Document Your View Here)
+  This is the application's master controller. It serves as communication
+  hub between the controllers of the different widgets.
+
+  In this case it holds a reference to the currently selected object (image),
+  in order to keep the thumbnail and tree views synchronized.
 
   @extends SC.Object
   @author AuthorName
@@ -34,16 +38,6 @@ MvoDruid.masterController = SC.CollectionController.create(
 		}
 	}.property('selectedObjectId'),
 
-	metadata: function () {
-		var md = MvoDruid.Metadata.findAll();
-		if (md) {
-			return md[0];
-		}
-		else {
-			return undefined;
-		}
-	}.property(),
-	
 	/**
 	Changes the currently selected object
 	@param {String} the guid of an object of type MvoDruid.CoreNode (TODO: not yet! for now it's of type MvoDruid.SampleImage)
@@ -52,40 +46,18 @@ MvoDruid.masterController = SC.CollectionController.create(
         console.log('mastercontroller.changeSelection ' + guid);
 		this.set('selectedObjectId', guid);
 	},
-	
-	/**
-	this is a dirty hack: this method repeats some of the initial work done in main.js
-	in order to be able to reload the fixture data for a different example
-	*/
-	loadFixtures: function (fixtureData) {
-        console.log('mastercontroller.loadFixtures');
-		// remove current fixture records from the store
-		SC.Store.destroyRecords(MvoDruid.SampleImage.findAll());
-		SC.Store.destroyRecords(MvoDruid.TreeNode.findAll());
-		// reload new fixtures
-		MvoDruid.server.preload(fixtureData);
-		// update controllers' collections
-		var imageCollection = MvoDruid.SampleImage.collection();
-		this.set('content', imageCollection); // TODO: should be a MvoDruid.CoreNode collection
-		imageCollection.refresh();
-		MvoDruid.thumbnailController.set('content', imageCollection);
-		imageCollection.refresh();
-		// rebuild tree widget
-		SC.page.getPath('treeScrollView.treeView').buildTree();
-		//MvoDruid.treeController.masterObjectSelectionDidChange();
-	},
 
-	loadFixturesExample1: function () {
-		this.loadFixtures(MvoDruid.FIXTURES_indiana);
-	},
-	loadFixturesExample2: function () {
-		this.loadFixtures(MvoDruid.FIXTURES_rerodoc);
-	},
-	loadFixturesExample3: function () {
-		this.loadFixtures(MvoDruid.FIXTURES_berkley);
-	},
-	loadFixturesExample4: function () {
-		this.loadFixtures(MvoDruid.FIXTURES_dfg);
-	}
+	/**
+	A computed property that returns the metadata record
+	*/
+	metadata: function () {
+		var md = MvoDruid.Metadata.findAll();
+		if (md) {
+			return md[0];
+		}
+		else {
+			return undefined;
+		}
+	}.property()
 
 });

@@ -1,3 +1,10 @@
+<!--
+	These are the components available.
+	
+	They are placed at the appropriate region of the application layout by the pane controller.
+-->
+
+
 <!-- title view -->
 
 <%= label_view :title_view, :tag => 'h1', :value => 'Multivio prototype Druid' %>
@@ -45,10 +52,29 @@
 
 <% scroll_view :metadata_scroll_view do %>
 	<% view :metadata_view do %>
+		<%= label_view :tag => 'span', :class => 'metadata_primary', :content_value_key => 'title',
+			:bind => { :content => 'MvoDruid.masterController.metadata' }
+		%>
+		<br />
+		<%= label_view :tag => 'span', :class => 'metadata_secondary', :content_value_key => 'author',
+			:bind => { :content => 'MvoDruid.masterController.metadata' }
+		%>
+	<% end %>
+<% end %>
+
+
+<!-- detailed metadata view -->
+
+<% scroll_view :detailed_metadata_scroll_view do %>
+	<% view :detailed_metadata_view do %>
 		<%= label_view :tag => 'h3', :content_value_key => 'title',
 			:bind => { :content => 'MvoDruid.masterController.selectedObject' }
 		%>
 		<%= loc(%(Author)) %>: <%= label_view :tag => 'span', :content_value_key => 'author',
+			:bind => { :content => 'MvoDruid.masterController.selectedObject' }
+		%>
+		<br />
+		<%= loc(%(Title)) %>: <%= label_view :tag => 'span', :content_value_key => 'title',
 			:bind => { :content => 'MvoDruid.masterController.selectedObject' }
 		%>
 		<br />
@@ -77,5 +103,33 @@
 		:bind => {
 			:value => 'MvoDruid.paneController.isLeftPaneEnabled'
 		}
+	%>
+
+	<%= image_view :class => 'toolbox_icon', :value => static_url('icons/move.png') %>
+	<%= image_view :class => 'toolbox_icon', :value => static_url('icons/rotate_left.png') %>
+	<%= image_view :class => 'toolbox_icon', :value => static_url('icons/rotate_right.png') %>
+	<%= image_view :class => 'toolbox_icon', :value => static_url('icons/zoom-plus.png') %>
+	<%= image_view :class => 'toolbox_icon', :value => static_url('icons/zoom-minus.png') %>
+<% end %>
+
+
+<!-- example selection view -->
+
+<% view :example_selection_view do %>
+	<%= button_view :button_example_1,
+		:label => loc(%(Indiana)),
+		:action => 'MvoDruid.masterController.loadFixturesExample1'
+	%>
+	<%= button_view :button_example_2,
+		:label => loc(%(Anatomie)),
+		:action => 'MvoDruid.masterController.loadFixturesExample2'
+	%>
+	<%= button_view :button_example_3,
+		:label => loc(%(Berkeley)),
+		:action => 'MvoDruid.masterController.loadFixturesExample3'
+	%>
+	<%= button_view :button_example_4,
+		:label => loc(%(DFGViewer)),
+		:action => 'MvoDruid.masterController.loadFixturesExample4'
 	%>
 <% end %>

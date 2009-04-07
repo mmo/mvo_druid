@@ -6,6 +6,8 @@ require('core');
 
 MvoDruid.FIXTURES_indiana = MvoDruid.FIXTURES_indiana.concat([
 
+	{ guid: 'metadata', type: 'Metadata', author: 'Karl Pearson', title: 'The Problem of Practical Eugenics' },
+
 	{ guid: 'f_000001', type: 'SampleImage', url: static_url('photos/VAA/VAA1194-01-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-01-screen.gif', treelabel: 'la_000002', number: '1' },
 	{ guid: 'f_000002', type: 'SampleImage', url: static_url('photos/VAA/VAA1194-02-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-02-screen.gif', treelabel: 'la_000002', number: '2' },
 	{ guid: 'f_000003', type: 'SampleImage', url: static_url('photos/VAA/VAA1194-03-screen.gif'), image_url: 'http://purl.dlib.indiana.edu/iudl/brittlebooks/page/VAA1194-03-screen.gif', treelabel: 'la_000003', number: '3' },
